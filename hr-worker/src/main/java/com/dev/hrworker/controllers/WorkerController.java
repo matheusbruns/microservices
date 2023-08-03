@@ -1,4 +1,4 @@
-package com.dev.hrworker.Controller;
+package com.dev.hrworker.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dev.hrworker.Model.WorkerModel;
-import com.dev.hrworker.repository.WorkerRepository;
+import com.dev.hrworker.entities.WorkerModel;
+import com.dev.hrworker.repositories.WorkerRepository;
 
 @RestController
 @RequestMapping(value = "/workers")

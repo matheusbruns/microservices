@@ -1,4 +1,4 @@
-package com.dev.hrworker.Model;
+package com.dev.hrworker.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "tb_worker")
 public class WorkerModel {
@@ -19,27 +22,4 @@ public class WorkerModel {
 	@Column(name = "daily_income")
 	private Double dailyIncome;
 
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Double getDailyIncome() {
-		return dailyIncome;
-	}
-
-	public void setDailyIncome(Double dailyIncome) {
-		this.dailyIncome = dailyIncome;
-	}
 }
