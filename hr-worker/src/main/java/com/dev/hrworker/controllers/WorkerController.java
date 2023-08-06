@@ -27,9 +27,9 @@ public class WorkerController {
 	}
 
 	@GetMapping(value = "/find-by-id")
-	public Optional<WorkerModel> getById(@RequestParam("workerId") Long workerId) {
+	public ResponseEntity<Optional<WorkerModel>> getById(@RequestParam("workerId") Long workerId) {
 		Optional<WorkerModel> worker = this.workerRepository.findById(workerId);
-		return worker;
+		return ResponseEntity.ok(worker);
 	}
 
 }
